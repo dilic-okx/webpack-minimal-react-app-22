@@ -1,0 +1,40 @@
+@import url('@material/list/dist/mdc.list.min.css');
+
+.focus-trap {
+	height: 0;
+	overflow: hidden;
+}
+
+:not(.mdc-deprecated-list--non-interactive) > :not(.mdc-deprecated-list-item--disabled):not(.mdc-deprecated-list-item--activated).mdc-deprecated-list-item:hover::before {
+	opacity: 0.3;
+	z-index: -1;
+}
+
+:not(.mdc-deprecated-list--non-interactive) > :not(.mdc-deprecated-list-item--disabled).mdc-deprecated-list-item--selected:hover::before {
+	opacity: 0.08;
+}
+
+.mdc-deprecated-list-item {
+	color: var(--okx-heading-color);
+}
+
+.mdc-deprecated-list-item .mdc-deprecated-list-item__secondary-text, .mdc-deprecated-list-item .mdc-deprecated-list-item__graphic, .mdc-deprecated-list-item .mdc-deprecated-list-item__meta {
+	color: var(--mdc-theme-text-hint-on-background);
+}
+
+.mdc-deprecated-list-item--disabled .mdc-deprecated-list-item__text, .mdc-deprecated-list-item--disabled .mdc-deprecated-list-item__primary-text {
+	color: var(--okx-disabled-color);
+	opacity: 1;
+}
+
+.mdc-deprecated-list-item--disabled .mdc-deprecated-list-item__secondary-text, .mdc-deprecated-list-item--disabled .mdc-deprecated-list-item__graphic, .mdc-deprecated-list-item--disabled .mdc-deprecated-list-item__meta {
+	color: var(--okx-light-color);
+}
+
+.mdc-deprecated-list-item:not(.mdc-deprecated-list-item--disabled):not(.mdc-deprecated-list-item--activated):hover .mdc-deprecated-list-item__text, .mdc-deprecated-list-item:not(.mdc-deprecated-list-item--disabled):not(.mdc-deprecated-list-item--activated):hover .mdc-deprecated-list-item__primary-text {
+	color: var(--okx-highlight-color);
+}
+
+.mdc-deprecated-list-item:not(.mdc-deprecated-list-item--disabled):not(.mdc-deprecated-list-item--activated):hover .mdc-deprecated-list-item__secondary-text, .mdc-deprecated-list-item:not(.mdc-deprecated-list-item--disabled):not(.mdc-deprecated-list-item--activated):hover .mdc-deprecated-list-item__graphic, .mdc-deprecated-list-item:not(.mdc-deprecated-list-item--disabled):not(.mdc-deprecated-list-item--activated):hover .mdc-deprecated-list-item__meta {
+	color: var(--okx-heading-color);
+}

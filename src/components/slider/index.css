@@ -1,0 +1,37 @@
+@import url('@material/slider/dist/mdc.slider.min.css');
+
+.okx-slider__dom-hidden {
+	height: 0;
+	overflow: hidden;
+}
+
+.okx-slider__dom-input {
+	min-height: 0;
+	line-height: 0;
+	padding: 0;
+	margin: 0;
+	border: 0 none;
+	outline: 0 none;
+	opacity: 0.00000000001;
+}
+
+.mdc-slider:not(.mdc-slider--disabled) .mdc-slider__track,
+.mdc-slider:not(.mdc-slider--disabled) .mdc-slider__track-container::after,
+.mdc-slider:not(.mdc-slider--disabled) .mdc-slider__focus-ring,
+.mdc-slider:not(.mdc-slider--disabled) .mdc-slider__pin {
+	background-color: var(--okx-input-label-color);
+}
+
+.mdc-slider:not(.mdc-slider--disabled) .mdc-slider__thumb {
+	fill: var(--okx-input-label-color);
+	stroke: var(--okx-input-label-color);
+}
+
+.mdc-slider--disabled .mdc-slider__thumb {
+	/*fill: var(--okx-text-field-disabled-border-color);*/
+	stroke: var(--okx-text-field-disabled-border-color);
+}
+
+.mdc-slider--disabled.mdc-slider--discrete.mdc-slider--display-markers .mdc-slider__track-marker-container {
+	color: var(--okx-text-field-disabled-border-color);
+}

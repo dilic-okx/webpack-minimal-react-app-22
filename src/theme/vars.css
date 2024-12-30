@@ -1,0 +1,180 @@
+@font-face {
+	font-family: 'Roboto Condensed';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../assets/fonts/roboto-condensed/regular.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	font-style: italic;
+	font-weight: normal;
+	src: url('../assets/fonts/roboto-condensed/regular-italic.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	font-style: normal;
+	font-weight: bold;
+	src: url('../assets/fonts/roboto-condensed/bold.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	font-style: italic;
+	font-weight: bold;
+	src: url('../assets/fonts/roboto-condensed/bold-italic.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	font-style: normal;
+	font-weight: 100;
+	src: url('../assets/fonts/roboto-condensed/light.ttf');
+}
+
+@font-face {
+	font-family: 'Roboto Condensed';
+	font-style: italic;
+	font-weight: 100;
+	src: url('../assets/fonts/roboto-condensed/light-italic.ttf');
+}
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../assets/fonts/material-icons/index.woff2') format('woff2');
+}
+
+/** CSS Vars **/
+:root {
+	--okx-palette-primary: #fb0;
+	--okx-text-field-disabled-border-color: rgba(0,0,0,0.06);
+	--okx-heading-color: rgba(0,0,0,0.87);
+	--okx-highlight-color: rgba(0,0,0,0.95);
+	--okx-content-color: rgba(0,0,0,0.6);
+	--okx-secondary-content-color: rgba(0,0,0,0.54);
+	--okx-disabled-color: rgba(0,0,0,0.37);
+	--okx-backdrop-color: rgba(0,0,0,0.32);
+	--okx-light-color: rgba(0,0,0,0.12);
+	--okx-input-label-color: var(--okx-palette-primary);
+	--okx-input-checkmark-color: #fff;
+	--okx-input-icon-color: var(--okx-secondary-content-color);
+	--okx-dropdown-icon-path: url(../assets/shapes/dd-icon.svg);
+	--mdc-theme-primary: var(--okx-palette-primary);
+	--mdc-theme-on-primary: #111;
+	--mdc-theme-secondary: #0f0;
+	--mdc-theme-on-secondary: #000;
+	--mdc-theme-background: #fff;
+	--mdc-theme-surface: #f3f3f3;
+	--mdc-theme-on-surface: #222;
+	--mdc-theme-error: #b00020;
+	--mdc-theme-on-error: #fff;
+	--mdc-theme-text-primary-on-background: #222;
+	--mdc-theme-text-secondary-on-background: var(--okx-disabled-color);
+	--mdc-theme-text-icon-on-background: #777;
+	--mdc-theme-text-hint-on-background: var(--okx-disabled-color);
+	--mdc-dialog-scrim-color: var(--okx-backdrop-color);
+	--mdc-dialog-scroll-divider-color: var(--okx-light-color);
+	--mdc-shape-radius: 0;
+	--mdc-shape-small: 0;
+	--mdc-shape-medium: 0;
+	--mdc-shape-large: 0;
+	--mdc-shape-small-component-radius: 0;
+	--mdc-shape-medium-component-radius: 0;
+	--mdc-shape-large-component-radius: 0;
+	--mdc-text-field-filled-border-radius: 0;
+	--mdc-dialog-shape-radius: 0;
+	--mdc-typography-font-family: 'Roboto Condensed', sans-serif;
+	--okx-font-family: 'Roboto Condensed', sans-serif;
+	--okx-scrollbar-color: #ccc #f9f9f9;
+	--okx-flex-min: 5px;
+	--okx-flex-spacer: 20px;
+	--okx-big-label-font-size: 42px;
+	--okx-big-label-color: #000;
+	--okx-big-label-margin: 2px 0;
+	--okx-big-label-padding: 0;
+	--okx-title-font-size: 20px;
+	--okx-title-color: #000;
+	--okx-title-margin: 2px 0;
+	--okx-title-padding: 0;
+	--okx-subtitle-font-size: 16px;
+	--okx-subtitle-color: #222;
+	--okx-subtitle-margin: 25px 0;
+	--okx-subtitle-padding: 0;
+	--okx-sectiontitle-font-size: 14px;
+	--okx-sectiontitle-color: #222;
+	--okx-sectiontitle-margin: 20px 0;
+	--okx-sectiontitle-padding: 0;
+	--okx-font-size: 14px;
+	--okx-small-text-font-size: 11px;
+	--okx-note-font-size: 12px;
+	--okx-error-font-size: 11px;
+	--okx-error-margin: 0 0 10px;
+	--okx-drawer-padding: 32px;
+	--okx-box-radius: 10px;
+	--okx-box-padding-left: 15px;
+	--okx-box-padding-top: 15px;
+	--okx-box-padding-right: 15px;
+	--okx-box-padding-bottom: 15px;
+	--okx-normal-text-color: #555;
+	--okx-light-text-color: #888;
+	--okx-incrementer-button-width: 40px;
+	--okx-victory-theme-grid: rgba(0,0,0,0.1);
+	--okx-main-content-padding: 16px;
+}
+.dark-theme {
+	--okx-heading-color: rgba(255,255,255,0.87);
+	--okx-highlight-color: rgba(255,255,255,0.95);
+	--okx-content-color: rgba(255,255,255,0.6);
+	--okx-secondary-content-color: rgba(255,255,255,0.54);
+	--okx-disabled-color: rgba(255,255,255,0.37);
+	--okx-backdrop-color: rgba(255,255,255,0.32);
+	--okx-light-color: rgba(255,255,255,0.12);
+	--okx-text-field-disabled-border-color: rgba(255,255,255,0.06);
+	--okx-dropdown-icon-path: url(../assets/shapes/dd-icon-white.svg);
+	--mdc-theme-background: #111;
+	--mdc-theme-surface: #222;
+	--mdc-theme-on-surface: #ddd;
+	--mdc-theme-text-primary-on-background: #f9f9f9;
+	--mdc-theme-text-secondary-on-background: var(--okx-secondary-content-color);
+	--mdc-theme-text-icon-on-background: #ccc;
+	--mdc-theme-text-hint-on-background: var(--okx-disabled-color);
+	/* additional mdc default colors not modified for light theme (no need to change when defining palette) */
+	--mdc-button-disabled-fill-color: var(--okx-light-color);
+	--mdc-button-disabled-ink-color: var(--okx-disabled-color);
+	--mdc-dialog-scrim-color: var(--okx-backdrop-color);
+	--mdc-dialog-heading-ink-color: var(--okx-heading-color);
+	--mdc-dialog-content-ink-color: var(--okx-content-color);
+	--mdc-dialog-scroll-divider-color: var(--okx-light-color);
+	--mdc-text-field-fill-color: rgb(10,10,10);
+	--mdc-text-field-ink-color: var(--okx-heading-color);
+	--mdc-text-field-label-ink-color: var(--okx-content-color);
+	--mdc-text-field-disabled-fill-color: var(--mdc-theme-background);
+	--mdc-text-field-disabled-ink-color: var(--okx-disabled-color);
+	--mdc-text-field-idle-line-color: rgba(255,255,255,0.42);
+	--mdc-text-field-hover-line-color: var(--okx-heading-color);
+	--mdc-text-field-outlined-idle-border-color: var(--okx-disabled-color);
+	--mdc-text-field-outlined-hover-border-color: var(--okx-heading-color);
+	--mdc-text-field-outlined-disabled-border-color: var(--okx-text-field-disabled-border-color);
+	--mdc-text-field-icon-color: var(--okx-input-icon-color);
+	--mdc-text-field-disabled-icon: rgba(255,255,255,0.3);
+	--mdc-select-ink-color: var(--okx-heading-color);
+	--mdc-select-disabled-ink-color: var(--okx-disabled-color);
+	--mdc-select-label-ink-color: var(--okx-input-label-color);
+	--mdc-select-outlined-idle-border-color: var(--okx-disabled-color);
+	--mdc-select-outlined-hover-border-color: var(--okx-heading-color);
+	--mdc-select-outlined-disabled-border-color: var(--okx-text-field-disabled-border-color);
+	--mdc-checkbox-checked-color: var(--mdc-theme-primary);
+	--mdc-checkbox-ink-color: var(--mdc-theme-on-primary);
+	--mdc-checkbox-unchecked-color: var(--okx-disabled-color);
+	--mdc-checkbox-disabled-color: var(--okx-text-field-disabled-border-color);
+	/* okx-colors */
+	--okx-scrollbar-color: var(--okx-disabled-color) var(--mdc-theme-background);
+	--okx-victory-theme-grid: rgba(255,255,255,0.1);
+	--okx-input-checkmark-color: var(--mdc-theme-surface, #000);
+	--okx-input-icon-color: var(--okx-secondary-content-color);
+	--okx-input-height: 28px;
+	--okx-input-wrapper-height: 56px;
+}

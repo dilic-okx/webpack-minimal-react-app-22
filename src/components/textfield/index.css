@@ -1,0 +1,180 @@
+@import url('@material/floating-label/dist/mdc.floating-label.min.css');
+@import url('@material/line-ripple/dist/mdc.line-ripple.min.css');
+@import url('@material/notched-outline/dist/mdc.notched-outline.min.css');
+@import url('@material/textfield/dist/mdc.textfield.min.css');
+
+.okx-text-field--fullwidth {
+  width: 100%;
+}
+
+.mdc-text-field {
+  border-bottom: 1px solid var(--mdc-text-field-idle-line-color);
+}
+
+.mdc-text-field.mdc-text-field--focused,
+.mdc-text-field.mdc-text-field--outlined,
+.mdc-text-field.mdc-text-field--invalid {
+  border-bottom: 0 none;
+}
+
+.mdc-text-field--textarea .mdc-floating-label {
+  left: 16px;
+}
+
+.mdc-text-field--textarea.mdc-text-field--outlined .mdc-floating-label {
+  left: 4px;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--okx-input-label-color);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled)
+  + .mdc-text-field-helper-line
+  .mdc-text-field-helper-text {
+  color: var(--mdc-text-field-label-ink-color);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) {
+  background-color: var(--mdc-theme-background);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: var(--mdc-text-field-ink-color);
+  border-color: var(--mdc-text-field-idle-line-color);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled)
+  .mdc-notched-outline__trailing {
+  border-color: var(--mdc-text-field-idle-line-color);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--invalid):hover,
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input:hover,
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--focused)
+  .mdc-text-field__input:hover
+  ~ .mdc-notched-outline
+  .mdc-notched-outline__leading,
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--focused)
+  .mdc-text-field__input:hover
+  ~ .mdc-notched-outline
+  .mdc-notched-outline__notch,
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--focused)
+  .mdc-text-field__input:hover
+  ~ .mdc-notched-outline
+  .mdc-notched-outline__trailing,
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--focused)
+  .mdc-text-field__icon:hover
+  ~ .mdc-notched-outline
+  .mdc-notched-outline__leading,
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--focused)
+  .mdc-text-field__icon:hover
+  ~ .mdc-notched-outline
+  .mdc-notched-outline__notch,
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--focused)
+  .mdc-text-field__icon:hover
+  ~ .mdc-notched-outline
+  .mdc-notched-outline__trailing,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused)
+  .mdc-text-field__input:hover
+  ~ .mdc-notched-outline
+  .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused)
+  .mdc-text-field__input:hover
+  ~ .mdc-notched-outline
+  .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused)
+  .mdc-text-field__input:hover
+  ~ .mdc-notched-outline
+  .mdc-notched-outline__trailing,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused)
+  .mdc-text-field__icon:hover
+  ~ .mdc-notched-outline
+  .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused)
+  .mdc-text-field__icon:hover
+  ~ .mdc-notched-outline
+  .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused)
+  .mdc-text-field__icon:hover
+  ~ .mdc-notched-outline
+  .mdc-notched-outline__trailing {
+  border-color: var(--mdc-text-field-hover-line-color);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled)
+  .mdc-text-field__input::placeholder,
+.mdc-text-field:not(.mdc-text-field--disabled)
+  .mdc-text-field-character-counter,
+.mdc-text-field:not(.mdc-text-field--disabled)
+  + .mdc-text-field-helper-line
+  .mdc-text-field-character-counter  {
+  color: var(--mdc-text-field-label-ink-color);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__icon--leading,
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__icon--trailing {
+  color: var(--mdc-text-field-disabled-ink-color);
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: var(--mdc-theme-error);
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-text-field__input,
+.mdc-text-field--invalid:not(.mdc-text-field--disabled)
+  .mdc-text-field__input:hover,
+.mdc-text-field--textarea.mdc-text-field--invalid {
+  border-color: var(--mdc-theme-error);
+}
+
+.mdc-text-field,
+.mdc-text-field--textarea .mdc-notched-outline .mdc-notched-outline__leading,
+.mdc-text-field--textarea .mdc-notched-outline .mdc-notched-outline__trailing,
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading,
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing {
+  border-radius: var(--mdc-shape-medium-component-radius);
+}
+
+.mdc-text-field--disabled .mdc-text-field__input,
+.mdc-text-field--disabled .mdc-floating-label,
+.mdc-text-field--disabled .mdc-text-field-character-counter,
+.mdc-text-field--disabled
+  + .mdc-text-field-helper-line
+  .mdc-text-field-character-counter {
+  color: var(--mdc-text-field-disabled-ink-color);
+}
+
+.mdc-text-field--disabled .mdc-text-field__icon--leading,
+.mdc-text-field--disabled .mdc-text-field__icon--trailing {
+  color: var(--okx-text-field-disabled-border-color);
+}
+
+.mdc-text-field--disabled,
+.mdc-text-field--textarea.mdc-text-field--disabled,
+.mdc-text-field--disabled.mdc-text-field--filled {
+  background-color: var(--mdc-text-field-disabled-fill-color);
+}
+
+.mdc-text-field.mdc-text-field--disabled {
+  border-bottom: 1px solid var(--okx-text-field-disabled-border-color);
+}
+
+.mdc-text-field--disabled .mdc-text-field__input {
+  border-bottom-color: var(--okx-text-field-disabled-border-color);
+}
+
+.mdc-text-field--outlined.mdc-text-field--disabled
+  .mdc-notched-outline__leading,
+.mdc-text-field--outlined.mdc-text-field--disabled .mdc-notched-outline__notch,
+.mdc-text-field--outlined.mdc-text-field--disabled
+  .mdc-notched-outline__trailing {
+  border-color: var(--mdc-text-field-outlined-disabled-border-color);
+}

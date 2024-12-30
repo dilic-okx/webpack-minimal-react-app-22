@@ -1,0 +1,16 @@
+#register .links {
+  margin-bottom: 80px;
+  flex-wrap: wrap; }
+
+#register .form .mdc-text-field {
+  width: 100%; }
+
+#register .content {
+  align-items: center; }
+
+#register .form-label {
+  margin-bottom: 30px; }
+  #register .form-label .big {
+    font-size: 27px; }
+  #register .form-label .small {
+    font-size: 12px; }

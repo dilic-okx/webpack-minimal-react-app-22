@@ -1,0 +1,80 @@
+@import url('@material/dialog/dist/mdc.dialog.css');
+@import url('@material/button/dist/mdc.button.css');
+
+.modal-set .mdc-dialog {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+  .modal-set .mdc-dialog .mdc-dialog__container {
+    transform: none;
+    position: fixed;
+    left: 20%;
+    top: 5%;
+    right: 20%;
+    bottom: 0; }
+    .modal-set .mdc-dialog .mdc-dialog__container .mdc-dialog__surface {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      max-width: none;
+      max-height: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto; }
+
+.modal-set .mdc-dialog.offset1 {
+  z-index: 8; }
+  .modal-set .mdc-dialog.offset1 .mdc-dialog__container {
+    top: 10%; }
+
+.modal-set .mdc-dialog.offset2 {
+  z-index: 9; }
+  .modal-set .mdc-dialog.offset2 .mdc-dialog__container {
+    top: 15%; }
+
+.modal-set .mdc-dialog.offset3 {
+  z-index: 10; }
+  .modal-set .mdc-dialog.offset3 .mdc-dialog__container {
+    top: 20%; }
+
+.modal-set .mdc-dialog.offset4 {
+  z-index: 11; }
+  .modal-set .mdc-dialog.offset4 .mdc-dialog__container {
+    top: 25%; }
+
+.modal-set .mdc-dialog.offset5 {
+  z-index: 12; }
+  .modal-set .mdc-dialog.offset5 .mdc-dialog__container {
+    top: 30%; }
+
+.modal-set .mdc-dialog.offset6 {
+  z-index: 13; }
+  .modal-set .mdc-dialog.offset6 .mdc-dialog__container {
+    top: 5%; }
+
+.modal-set .mdc-dialog.offset7 {
+  z-index: 14; }
+  .modal-set .mdc-dialog.offset7 .mdc-dialog__container {
+    top: 10%; }
+
+.modal-set .mdc-dialog.offset8 {
+  z-index: 15; }
+  .modal-set .mdc-dialog.offset8 .mdc-dialog__container {
+    top: 15%; }
+
+.modal-set .mdc-dialog.offset9 {
+  z-index: 16; }
+  .modal-set .mdc-dialog.offset9 .mdc-dialog__container {
+    top: 20%; }
+
+.modal-set .mdc-dialog.offset10 {
+  z-index: 17; }
+  .modal-set .mdc-dialog.offset10 .mdc-dialog__container {
+    top: 25%; }
+
+.modal-set .mdc-dialog.offset11 {
+  z-index: 18; }
+  .modal-set .mdc-dialog.offset11 .mdc-dialog__container {
+    top: 30%; }

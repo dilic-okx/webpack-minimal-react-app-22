@@ -1,0 +1,47 @@
+@import url('@material/top-app-bar/dist/mdc.top-app-bar.min.css');
+@import url('@material/icon-button/dist/mdc.icon-button.min.css');
+
+.mdc-drawer .mdc-deprecated-list-item {
+	min-height: calc(48px - 2 * 4px);
+	height: auto;
+}
+
+#root, .mdc-drawer-app-content {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.mdc-drawer-app-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.mdc-top-app-bar {
+	position: relative;
+	flex: 0 0 auto;
+}
+
+.main-content {
+	flex: 1 1 auto;
+	overflow-y: auto;
+}
+
+.mdc-top-app-bar {
+	--mdc-theme-primary: var(--mdc-theme-surface);
+	--mdc-theme-on-primary: var(--okx-palette-primary);
+}
+
+.main-content {
+	padding: var(--okx-main-content-padding);
+}
+
+.main-content.no-padding {
+	padding: 0;
+}
+
+.compact .mdc-top-app-bar__row {
+  height: 32px;
+}

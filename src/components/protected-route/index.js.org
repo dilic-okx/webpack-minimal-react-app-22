@@ -1,0 +1,37 @@
+import React from 'react'
+import { Route, Navigate } from 'react-router-dom'
+
+import { restoreAuth, setProtectedReferrer } from '../../store/actions.js'
+
+class ProtectedRoute extends React.Component {
+  async componentDidMount() {
+    const { Component, render, auth, path } = this.props
+    const { loggedIn } = auth
+    if (!(loggedIn && (Component || render))) {
+      this.props.dispatch(setProtectedReferrer(path))
+      this.props.dispatch(restoreAuth())
+    }
+  }
+
+  render() {
+    const { component: Component, render, auth, ...rest } = this.props
+    const { loggedIn } = auth
+    return (
+      <Route
+        {...rest}
+        element={
+          loggedIn && render
+            ? render
+            : () =>
+                loggedIn && Component ? (
+                  <Component {...rest} />
+                ) : (
+                  <Navigate to="/login" />
+                )
+        }
+      />
+    )
+  }
+}
+
+export default ProtectedRoute

@@ -1,0 +1,17 @@
+@import url('@material/drawer/dist/mdc.drawer.css');
+
+.mdc-drawer .mdc-deprecated-list-item {
+	color: var(--okx-heading-color);
+}
+
+.mdc-drawer .mdc-deprecated-list-item__graphic {
+	color: var(--mdc-theme-text-hint-on-background);
+}
+
+.mdc-drawer .mdc-deprecated-list-item--activated .mdc-deprecated-list-item__text, .mdc-drawer .mdc-deprecated-list-item--activated .mdc-deprecated-list-item__graphic {
+	color: var(--okx-palette-primary);
+}
+
+.mdc-drawer .mdc-deprecated-list-item {
+	border-radius: var(--mdc-shape-medium-component-radius);
+}

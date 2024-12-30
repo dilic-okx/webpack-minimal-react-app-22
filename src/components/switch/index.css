@@ -1,0 +1,12 @@
+@import url('@material/form-field/dist/mdc.form-field.min.css');
+@import url('@material/switch/dist/mdc.switch.min.css');
+
+.mdc-switch.mdc-switch--checked .mdc-switch__thumb,
+.mdc-switch__thumb-underlay::before, .mdc-switch__thumb-underlay::after,
+.mdc-switch.mdc-switch--checked .mdc-switch__track {
+	background-color: var(--okx-input-label-color);
+}
+
+.mdc-switch.mdc-switch--checked .mdc-switch__thumb {
+	border-color: var(--okx-input-label-color);
+}

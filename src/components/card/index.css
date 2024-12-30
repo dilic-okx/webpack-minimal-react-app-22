@@ -1,0 +1,5 @@
+@import url('@material/card/dist/mdc.card.css');
+
+.mdc-card--outlined {
+  border-color: var(--mdc-select-outlined-idle-border-color);
+}

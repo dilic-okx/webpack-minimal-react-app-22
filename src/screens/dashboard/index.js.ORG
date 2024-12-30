@@ -1,0 +1,23 @@
+import React from 'react'
+import Button from '../../components/button'
+import Layout from '../../components/layout'
+
+class Dashboard extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    };
+  }
+  
+  render() {
+    return (
+      <Layout label="Dashboard">
+        Dashboard
+        <Button outlined>butt 1 example</Button>
+      </Layout>
+    )
+  }
+}
+
+export default Dashboard

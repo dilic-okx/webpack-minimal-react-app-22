@@ -1,0 +1,129 @@
+import React, { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Layout from '../../components/layout'
+import Textfield from '../../components/textfield'
+import Button from '../../components/button'
+import { loginRequest } from '../../store/actions'
+import { withTranslation } from '../../lib/translate'
+
+const Login = (props) => {
+  const refs = {
+    usernameRef: useRef(),
+    passwordRef: useRef()
+  }
+  const form = {}
+  const errors = {}
+  const validate = (key, val) => {
+    const fieldRef = refs[key + 'Ref']
+    // mwc currently not handle minLength, so we do it manually for all ref fields
+    /*Object.keys(refs).forEach((k) => {
+      const itemRef = refs[k]
+	  console.log('=---', itemRef.current)
+      const itemKey = k.slice(0, -3) // removing trailin 'Ref' from key
+      const ml = itemRef.current.props.minLength
+      const minLength = ml ? parseInt(ml, 10) : null
+      if (
+        minLength &&
+        (itemRef.current ? minLength > itemRef.current.value.length : false)
+      ) {
+        if (!errors[k]) {
+          errors = { ...errors, [itemKey]: 1 }
+        }
+      }
+    })*/
+    console.log('----fieldRef.current', fieldRef.current.value)
+    const ml = fieldRef.current.props.minLength
+    const minLength = ml ? parseInt(ml, 10) : null
+    if (!minLength || minLength <= val) {
+      // rest of validation
+      if (fieldRef.current.checkValidity()) {
+        if (errors[key]) {
+          delete errors[key]
+        }
+      } else {
+        if (!errors[key]) {
+          errors = { ...errors, [key]: 1 }
+        }
+      }
+    }
+  }
+
+  const handleLogin = (data) => {
+    const { username, password } = data
+    props.dispatch(loginRequest({ username, password }))
+  }
+
+  const { __ } = props
+  const { username, password } = form
+  const { usernameRef, passwordRef } = refs
+  const [valid, setValid] = useState(false)
+  useEffect(() => {
+    if (
+      usernameRef.current &&
+      passwordRef.current &&
+      usernameRef.current.value !== '' &&
+      passwordRef.current.value !== '' &&
+      Object.keys(errors).length === 0
+    ) {
+      setValid(true)
+      return
+    }
+    setValid(false)
+  }, [usernameRef.current.value, passwordRef.current.value])
+  console.log('---valid', valid)
+  const disabledAttr = !valid ? { disabled: 'disabled' } : {}
+  return (
+    <Layout label={__('Login')}>
+      <div className="mdc-layout-grid">
+        <div className="mdc-layout-grid__inner">
+          <div className="mdc-layout-grid__cell">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault()
+                return false
+              }}
+            >
+              <Textfield
+                ref={usernameRef}
+                name="username"
+                autoComplete="username"
+                icon="person"
+                label={__('Username')}
+                helper={__('Type your email (username) here')}
+                onKeyUp={(e) => validate('username', e.target.value)}
+                defaultValue={username}
+                type="email"
+                required={true}
+                minLength="5"
+              />
+              <br />
+              <Textfield
+                ref={passwordRef}
+                name="password"
+                autoComplete="current-password"
+                icon="lock"
+                label="Password"
+                helper={__('Type your password here')}
+                onKeyUp={(e) => validate('password', e.target.value)}
+                type="password"
+                defaultValue={password}
+                required={true}
+                minLength="6"
+              />
+              <br />
+              <Button raised onClick={handleLogin} {...disabledAttr}>
+                {__('Login')}
+              </Button>
+            </form>
+            <p>{__('Not a member? Click bellow to')}</p>
+            <Button onClick={() => useNavigate()('/register')}>
+              {__('Register')}
+            </Button>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+}
+
+export default withTranslation(Login)

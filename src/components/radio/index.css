@@ -1,0 +1,72 @@
+@import url('@material/form-field/dist/mdc.form-field.min.css');
+@import url('@material/radio/dist/mdc.radio.min.css');
+
+.mdc-radio {
+	margin: 4px;
+}
+
+.mdc-radio .mdc-radio__native-control {
+	top: calc((48px - 48px) / 2);
+  right: calc((48px - 48px) / 2);
+  left: calc((48px - 48px) / 2);
+  width: 48px;
+  height: 48px;
+}
+
+.mdc-radio-helper-text {
+	font-family: var(--mdc-typography-caption-font-family,var(--mdc-typography-font-family, Roboto,));
+	font-size: var(--mdc-typography-caption-font-size, 0.75rem);
+	font-weight: var(--mdc-typography-caption-font-weight, 400);
+	letter-spacing: var(--mdc-typography-caption-letter-spacing, 0.0333333333em);
+	text-decoration: var(--mdc-typography-caption-text-decoration, inherit);
+	text-transform: var(--mdc-typography-caption-text-transform, inherit);
+	display: block;
+	line-height: normal;
+	margin: 0;
+	opacity: 0;
+	will-change: opacity;
+	transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+	color: var(--mdc-text-field-label-ink-color);
+}
+
+.mdc-form-field + .mdc-radio-helper-line {
+	padding-right: 16px;
+	padding-left: 16px;
+}
+
+.mdc-form-field:hover + .mdc-radio-helper-line .mdc-radio-helper-text {
+	opacity: 1;
+}
+
+.mdc-radio:not(.mdc-radio--disabled) + label {
+	color: var(--okx-input-label-color);
+}
+
+.mdc-radio.mdc-radio--invalid:not(.mdc-radio--disabled) + label {
+	color: var(--mdc-theme-error);
+}
+
+.mdc-radio.mdc-radio--disabled + label {
+	color: var(--mdc-text-field-disabled-ink-color);
+}
+
+.mdc-radio .mdc-radio__native-control:enabled:not(:checked) + .mdc-radio__background .mdc-radio__outer-circle {
+	border-color: var(--mdc-text-field-idle-line-color);
+}
+
+.mdc-form-field:hover .mdc-radio .mdc-radio__native-control:enabled:not(:checked) + .mdc-radio__background .mdc-radio__outer-circle {
+	border-color: var(--mdc-text-field-hover-line-color);
+}
+
+.mdc-radio [aria-disabled="true"] .mdc-radio__native-control:not(:checked) + .mdc-radio__background .mdc-radio__outer-circle, .mdc-radio .mdc-radio__native-control:disabled:not(:checked) + .mdc-radio__background .mdc-radio__outer-circle {
+	border-color: var(--okx-text-field-disabled-border-color);
+}
+
+.mdc-radio .mdc-radio__native-control:enabled:checked + .mdc-radio__background .mdc-radio__outer-circle,
+.mdc-radio .mdc-radio__native-control:enabled + .mdc-radio__background .mdc-radio__inner-circle {
+	border-color: var(--okx-input-label-color);
+}
+
+.mdc-radio .mdc-radio__ripple::before, .mdc-radio .mdc-radio__ripple::after {
+	background-color: var(--okx-input-label-color);
+}

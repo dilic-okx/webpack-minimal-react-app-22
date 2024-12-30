@@ -1,0 +1,11 @@
+.dashboard-entity .flex-cell:first-child {
+  padding-right: 32px;
+  flex-wrap: wrap;
+}
+
+.dashboard-entity .flex-cell:last-child {
+  flex-basis: 100%;
+  height: 15rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

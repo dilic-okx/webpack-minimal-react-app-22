@@ -1,0 +1,107 @@
+@import url('@material/floating-label/dist/mdc.floating-label.min.css');
+
+.okx-reselect {
+	position: relative;
+}
+
+.okx-reselect .mdc-floating-label {
+	left: 16px;
+	right: auto;
+	top: 16px;
+	color: var(--okx-input-label-color);
+}
+
+.okx-reselect.okx-reselect-outlined .mdc-floating-label {
+	background-color: var(--mdc-theme-background);
+	padding: 0 5px;
+	left: 11px;
+	top: 12px;
+}
+
+.okx-reselect > div {
+	position: relative;
+	box-sizing: border-box;
+}
+
+.okx-reselect > div > div:first-of-type {
+	position: relative;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	cursor: default;
+	background-color: var(--mdc-theme-background);
+	border-radius: var(--mdc-shape-medium-component-radius);
+	min-height: 38px;
+	outline: 0 none !important;
+	transition: all 100ms;
+	border-width: 0 0 1px 0;
+	border-style: solid;
+	border-color: var(--mdc-select-outlined-idle-border-color);
+	/* bs props */
+	-webkit-box-align: center;
+	-webkit-box-pack: justify;
+}
+
+.okx-reselect.okx-reselect-outlined > div > div:first-of-type {
+	border-width: 1px;
+}
+
+.okx-reselect:hover > div > div:first-of-type {
+	border-color: var(--mdc-select-outlined-hover-border-color);
+}
+
+.okx-reselect > div > div:first-of-type > div:first-child {
+	position: relative;
+	box-sizing: border-box;
+	flex: 1 1 0%;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	overflow: hidden;
+	padding: 20px 0 4px 16px;
+	/* bs props */
+	-webkit-box-align: center;
+}
+
+.okx-reselect.okx-reselect-outlined > div > div:first-of-type > div:first-child {
+	padding: 14px 0 12px 16px;
+}
+
+.okx-reselect > div > div:first-of-type > div:last-child {
+	box-sizing: border-box;
+	flex-shrink: 0;
+	align-self: stretch;
+	display: flex;
+	align-items: center;
+	/* bs props */
+	-webkit-box-align: center;
+}
+
+.okx-reselect > div > div:first-of-type > div:first-child > div:not(:last-child):not([class$="-placeholder"]) {
+	box-sizing: border-box;
+	display: flex;
+	min-width: 0;
+	margin: 2px;
+	background-color: transparent;
+	color: var(--mdc-select-ink-color);
+	border-radius: var(--mdc-shape-small-component-radius);
+}
+
+.okx-reselect.okx-reselect-multiple > div > div:first-of-type > div:first-child > div:not(:last-child):not([class$="-placeholder"]) {
+	background-color: var(--okx-light-color);
+}
+
+.okx-reselect > div > div:first-of-type > div:first-child > div:not(:last-child):not([class$="-placeholder"]) > div:first-child {
+	color: var(--okx-content-color);
+}
+
+.okx-reselect > div > div:first-of-type > div:first-child > div:not(:last-child):not([class$="-placeholder"]) > div:last-child {
+	border-radius: var(--mdc-shape-small-component-radius);
+}
+
+.okx-reselect > div > div:first-of-type > div:first-child > div:not(:last-child):not([class$="-placeholder"]) > div:last-child:hover {
+	background-color: var(--okx-backdrop-color);
+	color: var(--okx-highlight-color);
+}
